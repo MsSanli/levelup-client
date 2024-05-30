@@ -4,14 +4,14 @@ import { Card } from 'react-bootstrap';
 
 const GameCard = ({
   title, //
-  maker,
+  make,
   numberOfPlayers,
   skillLevel,
 }) => (
   <Card className="text-center">
     <Card.Header>{title}</Card.Header>
     <Card.Body>
-      <Card.Title>By: {maker}</Card.Title>
+      <Card.Title>By: {make}</Card.Title>
       <Card.Text>{numberOfPlayers} players needed</Card.Text>
     </Card.Body>
     <Card.Footer className="text-muted">Skill Level: {skillLevel}</Card.Footer>
@@ -20,7 +20,7 @@ const GameCard = ({
 
 GameCard.propTypes = {
   title: PropTypes.string.isRequired,
-  maker: PropTypes.string.isRequired,
+  make: PropTypes.string.isRequired,
   numberOfPlayers: PropTypes.number.isRequired,
   skillLevel: PropTypes.number.isRequired,
 };
