@@ -10,7 +10,7 @@ const initialState = {
   description: '',
   date: '',
   time: '',
-  gameId: 0,
+  game: 0,
   organizer: '',
 };
 
@@ -42,7 +42,7 @@ const EventForm = ({ eventObject }) => {
       description: currentEvent.description,
       date: currentEvent.date,
       time: currentEvent.time,
-      gameId: Number(currentEvent.gameId),
+      game: Number(currentEvent.game),
       organizer: user.uid,
     };
 
@@ -84,9 +84,9 @@ const EventForm = ({ eventObject }) => {
         <Form.Label>Game</Form.Label>
         <Form.Control
           as="select"
-          name="gameId"
+          name="game"
           required
-          value={currentEvent.gameId}
+          value={currentEvent.game}
           onChange={handleChange}
         >
           <option value="">Select a Game</option>
@@ -109,7 +109,7 @@ EventForm.propTypes = {
     description: PropTypes.string,
     date: PropTypes.string,
     time: PropTypes.string,
-    gameId: PropTypes.number,
+    game: PropTypes.number,
     organizer: PropTypes.string,
   }),
 };
