@@ -12,7 +12,7 @@ const EventCard = ({
       <Card.Text>{eventObj.description}</Card.Text>
       <Card.Text>Be there: {eventObj.date}</Card.Text>
     </Card.Body>
-    <Card.Footer className="text-muted">Game: {eventObj.game.title}</Card.Footer>
+    <Card.Footer className="text-muted">Game: {eventObj.game.id}</Card.Footer>
   </Card>
 );
 

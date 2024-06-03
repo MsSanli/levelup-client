@@ -14,16 +14,10 @@ const initialState = {
 
 const GameForm = ({ user }) => {
   const [gameTypes, setGameTypes] = useState([]);
-  /*
-  Since the input fields are bound to the values of
-  the properties of this state variable, you need to
-  provide some default values.
-  */
   const [currentGame, setCurrentGame] = useState(initialState);
   const router = useRouter();
 
   useEffect(() => {
-    // TODO: Get the game types, then set the state
     getGameTypes().then(setGameTypes);
   }, []);
 
@@ -65,7 +59,7 @@ const GameForm = ({ user }) => {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Make</Form.Label>
+          <Form.Label>Maker</Form.Label>
           <Form.Control
             name="make"
             required
